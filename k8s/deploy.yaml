@@ -1,16 +1,16 @@
 apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
-  name: dev-server
+  name: web-server
 spec:
   replicas: 2
   template:
     metadata:
       labels:
-        app: web
+        app: web-server
     spec:
       containers:
-      - name: web
+      - name: web-server
         image: nexus-docker.minikube/i.b.vermeg:webapp
         ports:
         - name: http-port
