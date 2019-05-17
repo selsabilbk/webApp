@@ -3,15 +3,15 @@ kind: Deployment
 metadata:
   name: dev-server
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       labels:
-        app: dev-server
+        app: web
     spec:
       containers:
-      - name: dev-server
-        image: nexus-docker.minikube/i.b.vermeg:springapp
+      - name: web
+        image: nexus-docker.minikube/i.b.vermeg:webapp
         ports:
         - name: http-port
           containerPort: 8080
