@@ -11,7 +11,7 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: nexus-docker.minikube/i.b.vermeg:webapp
+        image: nexus-docker.minikube/webapp:latest
         ports:
         - name: http-port
           containerPort: 8080
