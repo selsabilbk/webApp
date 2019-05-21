@@ -18,3 +18,5 @@ spec:
           protocol: TCP
         imagePullSecrets:
         - name: secret
+        imagePullSecrets:
+        - name: $KUBERNETES_SECRET_NAME
