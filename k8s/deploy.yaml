@@ -13,6 +13,7 @@ spec:
       containers:
       - name: web-server
         image: nexus-docker.minikube/webapp:1.0
+        imagePullPolicy: Always
         ports:
         - name: http-port
           containerPort: 8080
