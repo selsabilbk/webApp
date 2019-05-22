@@ -19,4 +19,4 @@ spec:
         imagePullSecrets:
         - name: secret
         imagePullSecrets:
-        - name: $KUBERNETES_SECRET_NAME
+        - name: mysecret
