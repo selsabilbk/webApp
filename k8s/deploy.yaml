@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: web-server
+  namespace: jenkins
 spec:
   replicas: 2
   template:
@@ -15,4 +16,6 @@ spec:
         ports:
         - name: http-port
           containerPort: 8080
-          protocol: TCP
+          protocol: TCP        
+        imagePullSecrets:
+        - name: nexus-docker-credentials
