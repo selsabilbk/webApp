@@ -12,11 +12,11 @@ spec:
     spec:
       containers:
       - name: web-server
-        image: nexus-docker.minikube/webapp: $BUILD_NUMBER
+        image: nexus-docker.minikube/webapp:$BUILD_NUMBER
         imagePullPolicy: Always
         ports:
         - name: http-port
           containerPort: 8080
           protocol: TCP
-        imagePullSecrets:
-        - name: $KUBERNETES_SECRET_NAME
+      imagePullSecrets:
+      - name: $KUBERNETES_SECRET_NAME
