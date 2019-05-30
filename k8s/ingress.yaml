@@ -2,6 +2,7 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: web-ingress
+  namespace: jenkins
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
@@ -11,4 +12,4 @@ spec:
       - path: /app
         backend:
           serviceName: web-server
-          servicePort: 8080
+          servicePort: 80
